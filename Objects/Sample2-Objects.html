@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      var movie = {
+        movie_name: "Kurukshetra",
+        Hero: "Dharshan",
+        Language: "Kannada",
+        Budget: "75cr",
+        release: "9 aug 2019"
+      };
+
+    //   Formula
+    //   for (dummyWord in objectName){
+    //       console.log(dummyWord)
+    //   }
+
+    for(a in movie){
+        document.write(a + " : "+movie[a]+"<br>")
+    }
+    //   document.write(movie.movie_name+"<br>"+movie.Hero)
+    </script>
+  </body>
+</html>
