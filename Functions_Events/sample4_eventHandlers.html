@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2
+      onmouseover="onmouseoverEvent()"
+      onmouseout="onmouseoutEvent()"
+      id="myHeading"
+    >
+      Hello Hover On Me
+    </h2>
+    <input
+      type="text"
+      onblur="changeBackGround('lightgrey')"
+      onfocus="changeBackGround('grey')"
+      onkeydown="keyDownFunction()"
+      onkeypress="keypressFunciton()"
+      onkeyup="onkeyUpFunction()"
+      onseeking=""
+      id="myInput"
+    />
+
+    <select name="" id="mySelect" onchange="getChangedvalue()">
+      <option value="1">Some1</option>
+      <option value="2">Some2</option>
+      <option value="3">Some3</option>
+      <option value="4">Some4</option>
+      <option value="5">Some5</option>
+      <option value="6">Some6</option>
+      <option value="7">Some7</option>
+      <option value="8">Some8</option>
+    </select>
+    <script>
+      function onmouseoverEvent() {
+        document.getElementById("myHeading").style.background = "red";
+      }
+
+      function onmouseoutEvent() {
+        document.getElementById("myHeading").style.background = "";
+      }
+      function changeBackGround(color) {
+        document.getElementById("myInput").style.background = color;
+      }
+      function keyDownFunction() {
+        console.log("keyDownFunction is called");
+      }
+      function keypressFunciton() {
+        console.log("keypressFunciton is called");
+      }
+      function onkeyUpFunction() {
+        console.log("onkeyUpFunction is Called");
+      }
+
+      function getChangedvalue() {
+        var val = document.getElementById("mySelect").value;
+        console.log(val);
+      }
+    </script>
+  </body>
+</html>

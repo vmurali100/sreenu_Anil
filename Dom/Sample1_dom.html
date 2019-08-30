@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">First Name</label>
+    <input type="text" name="" id="firstName" onkeyup="validfor()" />
+    <br /><br />
+    <h2 id="hello">Hello World</h2>
+    <button onclick="getValues()" id="myBtn">Get Value</button>
+    <script>
+      document.getElementById("myBtn").disabled = true;
+
+      function getValues() {
+        console.log(firstName);
+        var heading = document.getElementById("hello").innerHTML;
+        console.log(heading);
+      }
+
+      function validfor() {
+        var firstName = document.getElementById("firstName").value;
+        if (firstName.length > 5) {
+          document.getElementById("myBtn").disabled = false;
+        } else {
+          document.getElementById("myBtn").disabled = true;
+        }
+      }
+    </script>
+  </body>
+</html>

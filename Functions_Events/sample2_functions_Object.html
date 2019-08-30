@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="showUserInfo()">Show User Info</button>
+    <script>
+      function showUserInfo() {
+        var obj = {
+          fname: "Kyle",
+          lname: "Wurttemberg",
+          tel: "(412)172-7676",
+          address: "2219 Consequat Ave",
+          city: "Issaquah",
+          state: "MT",
+          zip: 49283
+        };
+        for (a in obj) {
+          document.write(a + " : " + obj[a] + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>
