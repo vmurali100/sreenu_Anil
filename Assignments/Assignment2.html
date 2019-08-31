@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="allcities"></ul>
+    <div id="stateInfo"></div>
+    <script>
+      var cities = [
+        {
+          name: "AP",
+          language: "Telugu",
+          population: "5Cr",
+          capital: "Amaravathi",
+          pic:
+            "https://slusi.dacnet.nic.in/dmwai/ANDHRAPRADESH/AndhraPradesh.png"
+        },
+        {
+          name: "Telangana",
+          language: "Telugu",
+          population: "5Cr",
+          capital: "Amaravathi",
+          pic:
+            "https://slusi.dacnet.nic.in/dmwai/ANDHRAPRADESH/AndhraPradesh.png"
+        },
+        {
+          name: "Tamil Nadu",
+          language: "Telugu",
+          population: "5Cr",
+          capital: "Amaravathi",
+          pic:
+            "https://slusi.dacnet.nic.in/dmwai/ANDHRAPRADESH/AndhraPradesh.png"
+        },
+        {
+          name: "Karnataka",
+          language: "Telugu",
+          population: "5Cr",
+          capital: "Amaravathi",
+          pic:
+            "https://slusi.dacnet.nic.in/dmwai/ANDHRAPRADESH/AndhraPradesh.png"
+        }
+      ];
+      for (i = 0; i < cities.length; i++) {
+        var myLi = document.createElement("li");
+        myLi.setAttribute("onclick", "showStateInfo(" + i + ")");
+        myLi.innerHTML = cities[i].name;
+        document.getElementById("allcities").appendChild(myLi);
+      }
+
+      function showStateInfo(i) {
+        var selectedState = cities[i];
+        console.log(selectedState);
+        var stateDetails = "";
+        for (a in selectedState) {
+          stateDetails = stateDetails + selectedState[a] + "<br>";
+        }
+        document.getElementById("stateInfo").innerHTML = stateDetails;
+      }
+    </script>
+  </body>
+</html>

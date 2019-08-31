@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="showCityNames()">Show City Names</button>
+    <div id="demo"></div>
+    <script>
+      var cities = ["Bangalore", "Chennai", "Hyderabad", "Amaravathi"];
+      function showCityNames() {
+        var allCities = "";
+        for (i = 0; i < cities.length; i++) {
+          allCities = allCities + cities[i] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = allCities;
+      }
+    </script>
+  </body>
+</html>
